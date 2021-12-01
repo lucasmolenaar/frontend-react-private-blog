@@ -1,0 +1,21 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 2rem;
+    margin-top: 5rem;
+    background-color: #282c34;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #282c34;
+    transition: .2s all ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: #282c34;
+    border: 2px solid #282c34;
+}

@@ -1,0 +1,14 @@
+.blogposts-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-items {
+    list-style-type: none;
+    text-align: center;
+}
+
+.list-item {
+
+}
