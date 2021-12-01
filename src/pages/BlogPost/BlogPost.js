@@ -4,14 +4,12 @@ import posts from '../../data/posts.json';
 import './BlogPost.css';
 
 const BlogPost = () => {
-
     const { blogId } = useParams();
-    console.log(posts);
 
     return (
         <div className="blogpost-page">
             <h2>Blog {blogId}</h2>
-            <h1>{posts[blogId].title}</h1>
+            <h1 className="title">{posts[blogId].title}</h1>
             <p>{posts[blogId].content}</p>
         </div>
     );

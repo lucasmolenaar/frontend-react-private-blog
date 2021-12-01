@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Switch, Route } from "react-router-dom";
-
-import './App.css';
+import {Switch, Route, Redirect} from "react-router-dom";
 
 import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./pages/HomePage/HomePage";
@@ -15,7 +13,10 @@ function App() {
 
   return (
     <>
-      <NavBar />
+      <NavBar
+          isAuthenticated={isAuthenticated}
+          toggleAuthentication={toggleIsAuthenticated}
+      />
 
       <Switch>
           <Route exact path="/">
@@ -23,15 +24,18 @@ function App() {
           </Route>
 
           <Route exact path="/login">
-              <LoginPage />
+              <LoginPage
+                isAuthenticated={isAuthenticated}
+                toggleAuthentication={toggleIsAuthenticated}
+              />
           </Route>
 
           <Route exact path="/blogposts">
-              <BlogPosts />
+              {isAuthenticated ? <BlogPosts /> : <Redirect to="/"/>}
           </Route>
 
           <Route path="/blogposts/:blogId">
-              <BlogPost />
+              {isAuthenticated ? <BlogPost /> : <Redirect to="/" />}
           </Route>
       </Switch>
     </>
