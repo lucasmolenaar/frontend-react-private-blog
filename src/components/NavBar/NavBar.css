@@ -1,0 +1,24 @@
+.navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    width: 40%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.active-link {
+    border-bottom: 1px solid white;
+}
